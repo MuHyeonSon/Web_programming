@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 웹프로그래밍 실습3 바이오메디컬공학부 201804594 손무현,-->
+<!-- HTML5 유효성 검사 사이트 : https://html5.validator.nu -->
+<!--목차 중 하나 클릭하면 그곳으로 가도록 연결시됨-->
+<!--path는 상대 path여야됨 -->
+<html>
+	<title>자기소개서</title>
+	<head>
+		<meta charset="UTF-8">
+		<h1 title="h2태그로 작성하였습니다.">자기소개서</h1>
+		<style>
+			@import url(손무현-스타일.css);
+		</style>
+	</head>
+	<body>
+		<hr>
+		<h2>
+			<b>*목차</b>
+		</h2>
+		<ol type = "1">
+			<li><a href=#이름>이름</a>
+			<li><a href=#사진>사진</a>
+			<li><a href=#학교/전공>학교/전공</a>
+			<li><a href=#시간표>시간표</a>
+			<li><a href=#이력>이력</a>
+			<li><a href=#취미>취미</a>
+			<li><a href=#좋아하는가수>좋아하는가수</a>
+		</ol>
+		<hr>
+		<h2><a id="이름">1.이름</a></h2>
+		<p>
+			한글 이름 : 손무현<small>(孫武賢)</small><br>
+			영문 이름 : Son Moo Hyeon<br>
+		</p>
+		<hr>
+		<h2><a id="사진">2.사진</a></h2>
+		<p>
+			<img    src=".\media\KakaoTalk_20220326_051626700.jpg"
+					alt="이미지를 찾을 수 없습니다."
+					width="240"
+					height="320">
+			
+		</p>
+		<hr>
+		<h2><a id="학교/전공">3.학교/전공</a></h2>
+		<p>
+			한국외국어대학교(Hankook university of foreign studies) 바이오메디컬공학부(Biomedical Engineering) 재학
+		</p>
+			
+			<a href="https://bme.hufs.ac.kr/bme/index.do">
+			<img src=".\media\이미지1.jpg"
+				 alt="이미지를 찾을 수 없습니다."
+			     width="670"
+				 height="296"></a>
+		
+		<hr>
+		<h2><a id="시간표">4.시간표</a></h2>
+			<table border='1'>
+				<caption><b>*2022-1 시간표*</b></caption>
+				<thead>
+					<tr><th> </th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th></tr>
+				</thead>
+				<tbody>
+					<tr><td style= "background-color : rgb(139,000,139)">9:30</td><td rowspan="3", style= "background-color : rgb(255,043,023)" >웹<br>프로그래밍</td><td rowspan="2", style= "background-color : rgb(106,206,205)">컴퓨터구조</td><td rowspan="3", style= "background-color : rgb(255,215,000)">운영체제<td><!--목--></td><td><!--금-->    </td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">10:30</td><td><!--목--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">11:30</td><td><!--화--></td><td><!--목--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">12:30</td><td><!--월--></td><td><!--화--></td><td><!--수--></td><td rowspan="3", style= "background-color : rgb(000,250,154)">Algorithm</td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">1:30</td><td><!--월--></td><td><!--화--></td><td><!--수--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">2:30</td><td><!--월--></td><td><!--화--></td><td><!--수--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">3:30</td><td><!--월--></td><td><!--화--></td><td rowspan="3", style= "background-color : rgb(255,218,196)">BME캡스톤<br>디자인실습</td><td><!--목--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">4:30</td><td><!--월--></td><td><!--화--></td><td><!--목--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">5:30</td><td><!--월--></td><td><!--화--></td><td><!--목--></td><td><!--금--></td></tr>
+					<tr><td style= "background-color : rgb(139,000,139)">6:30</td><td><!--월--></td><td><!--화--></td><td><!--수--></td><td><!--목--></td><td><!--금--></td></tr>
+				</tbody>
+			</table>
+		<hr>
+		<h2><a id="이력">5.이력</a></h2>
+		<ul>
+			<li>SNUBH prediction metastasis project
+			<li>
+				<a href="https://github.com/MuHyeonSon">Github</a>
+			</li>
+		</ul>
+		<hr>
+		<h2><a id="취미">6.취미</a></h2>
+		<ul>
+			<li>
+				<a href="https://www.instagram.com/p/CMhjlG7FR2l/?utm_source=ig_web_copy_link">
+				<img src=".\media\이미지2.jpg"
+					 alt="이미지를 찾을 수 없습니다."
+					 width="470"
+					 height="296"><br>피아노연주</br></a>
+			</li>
+			<li>
+				<a href="https://map.naver.com/v5/entry/place/19146071?c=14153833.8985984,4479735.2757560,13,0,0,0,dh&placePath=%2Fhome%3Fentry=plt">
+				<img src=".\media\이미지3.jpg"
+					 alt="이미지를 찾을 수 없습니다."
+					 width="470"
+					 height="296"><br>카공(카페에서공부하기)</br></a>
+			</li>
+		</ul>
+		<hr>
+		<h2><a id="좋아하는가수">7.좋아하는 가수</a></h2>
+		<p>
+		<b>볼빨간사춘기<b>
+		</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/tIhiTbJJ73M"
+		title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+		clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</body>
+</html>
