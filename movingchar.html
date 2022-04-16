@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>움직이는 글자</title>
+	<style>
+		@keyframes movingchar_WWW {
+			0%{ transform : scale(1,1) translateX(0px); }
+			50%{ transform : scale(3,3) translateX(75px);  }
+			100%{ transform : scale(1,1) translateX(0px);   }
+		}
+		@keyframes movingchar_HTML5 {
+			0%{ transform : scale(1,1) translateY(0px); }
+			50%{ transform : scale(3,3) translateY(75px);  }
+			100%{ transform : scale(1,1) translateY(0px);   }
+		}
+		@keyframes movingchar_JavaScript {
+			0%{ transform : scale(1,1) translateY(0px); }
+			50%{ transform : scale(3,3) translateY(-75px);  }
+			100%{ transform : scale(1,1) translateY(0px);   }
+		}
+		@keyframes movingchar_CSS3 {
+			0%{ transform : scale(1,1) translateX(0px); }
+			50%{ transform : scale(3,3) translateX(-75px);  }
+			100%{ transform : scale(1,1) translateX(0px);   }
+		}		
+		div#WWW{
+			float : left;
+			display : inline-block;
+			padding : 5px;
+			color : white;
+			font-size : 30px;
+			width : 90px;
+			height : 45px;
+			border-radius : 20px;
+			text-align : center;
+			top : 10px;
+			left : 10px;
+			background : black;
+			animation-name : movingchar_WWW;
+			animation-duration : 10s;
+			animation-iteration-count : infinite;
+			transition : transform 5s;
+			
+		}
+		
+		div#WWW:hover { transform : rotate(80deg); color : red;}
+
+		div#HTML5{
+			position : fixed;
+			display : inline-block;
+			padding : 5px;
+			color : white;
+			font-size : 30px;
+			width : 100px;
+			height : 45px;
+			border-radius : 20px;
+			text-align : center;
+			top : 10px;
+			right : 10px;
+			background : red ;
+			animation-name : movingchar_HTML5;
+			animation-duration : 10s;
+			animation-iteration-count : infinite;
+			transition : transform 5s;
+			
+		}
+		
+		div#HTML5:hover { transform : rotate(80deg); color : red;}
+		
+		div#JavaScript{
+			position : fixed;
+			display : inline-block;
+			padding : 5px;
+			color : white;
+			font-size : 30px;
+			width : 130px;
+			height : 45px;
+			border-radius : 20px;
+			text-align : center;
+			bottom : 10px;
+			left : 10px;
+			background : blue ;
+			animation-name : movingchar_JavaScript;
+			animation-duration : 10s;
+			animation-iteration-count : infinite;
+			transition : transform 5s;
+			
+		}
+		
+		div#JavaScript:hover { transform : rotate(80deg); color : red;}
+		
+		div#CSS3{
+			position : fixed;
+			display : inline-block;
+			padding : 5px;
+			color : white;
+			font-size : 30px;
+			width : 80px;
+			height : 45px;
+			border-radius : 20px;
+			text-align : center;
+			bottom : 10px;
+			right : 10px;
+			background : green ;
+			animation-name : movingchar_CSS3;
+			animation-duration : 10s;
+			animation-iteration-count : infinite;
+			transition : transform 5s;
+			
+		}
+		
+		div#CSS3:hover { transform : rotate(80deg); color : red;}
+
+		
+	</style>
+</head>
+<body>
+	<div id="WWW"> WWW </div>
+	<div id="HTML5"> HTML5 </div>
+	<div id="JavaScript"> JavaScript </div>
+	<div id="CSS3"> CSS3 </div>		
+</body>
+</html>
