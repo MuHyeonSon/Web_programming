@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 웹프로그래밍 5주차 실습 201804594 손무현-->
+<html>
+<head>
+	<title>비만도 판정</title>
+	<meta charset="utf-8"/>
+	<style>
+		td{
+			border : 1.4px solid black;
+		}
+		th{
+			border : 1.4px solid black;
+		}
+	</style>
+</head>
+<body>
+<table border="1">
+	<script type = "text/javascript">
+		var name = prompt("이름을 입력하세요...");
+		var height = prompt(name + "님의 키을 입력하세요...");
+		var weight = prompt(name + "님의 몸무게을 입력하세요...");
+		var BMI = weight / ((height/100)*(height/100));
+		var BMI_1 = BMI.toFixed(1);
+		var BMI_class;
+		
+		if (BMI < 18.5){
+			BMI_class = "저체중";
+			document.write("<tr><th>이름</th><td>" + name + "</td></tr>");
+			document.write("<tr><th>키</th><td>" + height + "cm</td></tr>");
+			document.write("<tr><th>몸무게</th><td>" + weight + "kg</td></tr>");
+			document.write("<tr><th>BMI</th><td>" + BMI_1 + "</td></tr>");
+			document.write("<tr><th>비만도</th><td style = 'font-size:45px; color:blue'>" + BMI_class + "</td></tr>");
+		}			
+		else if (BMI >= 18.5 && BMI < 25.0){
+			BMI_class = "정상";
+			document.write("<tr><th>이름</th><td>" + name + "</td></tr>");
+			document.write("<tr><th>키</th><td>" + height + "cm</td></tr>");
+			document.write("<tr><th>몸무게</th><td>" + weight + "kg</td></tr>");
+			document.write("<tr><th>BMI</th><td>" + BMI_1 + "</td></tr>");
+			document.write("<tr><th>비만도</th><td style = 'font-size:45px; color:black'>" + BMI_class + "</td></tr>");	
+		}
+		else if ((BMI >= 25.0) && (BMI < 30.0)){
+			BMI_class = "과체중";
+			document.write("<tr><th>이름</th><td>" + name + "</td></tr>");
+			document.write("<tr><th>키</th><td>" + height + "cm</td></tr>");
+			document.write("<tr><th>몸무게</th><td>" + weight + "kg</td></tr>");
+			document.write("<tr><th>BMI</th><td>" + BMI_1 + "</td></tr>");
+			document.write("<tr><th>비만도</th><td style = 'font-size:45px; color: rgb(238,113,57)'>" + BMI_class + "</td></tr>");
+		}
+		else {
+			BMI_class = "비만";
+			document.write("<tr><th>이름</th><td>" + name + "</td></tr>");
+			document.write("<tr><th>키</th><td>" + height + "cm</td></tr>");
+			document.write("<tr><th>몸무게</th><td>" + weight + "kg</td></tr>");
+			document.write("<tr><th>BMI</th><td>" + BMI_1 + "</td></tr>");
+			document.write("<tr><th>비만도</th><td style = 'font-size:45px; color: red'>" + BMI_class + "</td></tr>");	
+		}
+
+	</script>
+</table>
+</body>
+</html>
