@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>중간고사 2번</title>
+	<style>
+	input[type=time]{
+	background : skyblue;
+	font-weight : 500;
+	font-size : 50px;
+	color : red;
+	width : 350px;
+	height : 80px;
+	}
+	input[type=time]:hover{
+	background : yellow;
+}
+
+	input[type=reset]:hover{
+	cursor : progress;
+}
+	input[type=time]:hover{
+	cursor : progress;
+}
+	input[type=select]:hover{
+	cursor : progress;
+}
+	input[type=checkbox]:hover{
+	cursor : progress;
+}
+	input[type=submit]:hover{
+	cursor : progress;
+}
+	input[type=range]:hover{
+	cursor : progress;
+}
+
+
+	</style>
+</head>
+<body>
+<form>
+	<fieldset>
+		<legend style=" font-size : 35px;"><strong>알람 설정</strong></legend>
+		<input type="time" value="06:00"><br><br><br>
+		<label>
+		<input type="checkbox" value="1" id ="s">
+		일
+		</label>
+		<input type="checkbox" value="2" checked>
+		월		
+		<input type="checkbox" value="3" checked>
+		화
+		<input type="checkbox" value="4" checked>
+		수
+		<input type="checkbox" value="5" checked>
+		목
+		<input type="checkbox" value="6" checked>
+		금
+		<input type="checkbox" value="7">
+		토<br><br><br>
+		
+		알람 사운드 <select name="alamsound">
+			<option value="1" selected>Bell</option>
+			<option value="2">Ding Dong</option>
+			<option value="3">Beep</option>
+		</select><br><br><br>
+		
+		음량 0 <input type="range" min="0" max="15">
+		15<br><br>
+		
+
+	</fieldset>
+		<input type="reset" value="초기화">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="submit" value="등록">
+		<input type="reset" value="취소">
+</form>
+</body>
+</html>
