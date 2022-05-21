@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>유유시네마_예약페이지</title>
+	<style>
+		@import url(reserve.css);
+	</style>
+</head>
+<body onload="pageload();">
+	<header class="header1">
+		<nav id="header1_menubar" >
+			<ul>
+				<li><a href="check_reserve.html">예매확인</a></li>
+				<li><a href="#">오시는길</a></li>
+			</ul>
+		</nav>
+	</header>
+	<header class="header2">
+			<div>
+				<div style =" position : relative; left : 40px;">
+					<img id="logoimg" src="media/logo4.png" width = "120", height = "90">
+				</div>
+				<div id= "logo">
+					<b>유유시네마</b><br>
+					<p id="sogae">The place for you who love movies</p>
+				</div>
+				<div>
+					<nav id="menubar">
+					<ul>
+						<li><a href="./main.html">Home</a></li> |
+						<li><a href="./movie_introdution.html">영화소개</a></li> |
+						<li><a href="./reserve.html">예매</a></li> |
+						<li><a href="./introdution.html">극장소개</a></li> |
+						<li><a href="#">F.A.Q</a></li>
+					</ul>
+					</nav>
+				</div>
+				
+			 </div>
+	</header>
+
+
+	
+	
+	
+	
+	
+	
+	<section class="section1">
+	<div id = "info_selected_movie" style = " background : rgb(246,246,246);">
+		<h1 style ="text-align : center"> 선택영화 정보<hr></h1>
+		<div>
+			<!--<img src=".\media\피는물보다진하다포스터.jpg" alt="이미지를 찾을 수 없습니다." width="150" height="210">-->
+		</div>
+		<div style ="top : 0px;">
+
+			<table id="info_table">	
+			<tbody>
+			<tr><td style="background-color:rgb(248,248,248);">영화명</td><td id="atr"><p id="selected_movie">피는 물보다 진하다<p></td></tr>
+			<tr><td style="background-color:rgb(248,248,248);">상영관</td><td id="atr"><p>1관<p></td></tr>	
+			<tr><td style="background-color:rgb(248,248,248);">시간</td><td id="atr"><p id="selected_time">2022-05-01-15:10<p></td></tr>
+			<tr><td style="background-color:rgb(248,248,248);">선택좌석</td><td id="atr"><p id="selected_seat">A4-2<p></td></tr>
+			</tbody>
+
+			</table> 
+	</div>
+		<div>
+			<form>
+			<input type="button" value="예매하기" onclick="addItem();">
+			<input type="reset" value="설정초기화">
+			<form>
+		</div>
+			
+
+	<hr>
+		
+
+	</section>
+	
+	<section class="section2">
+	
+		<div id = "movies" style = " background : rgb(246,246,246);">
+		<h1 style ="text-align : center">전체영화(5)<hr></h1>
+			<table id="info_table">	
+			<tbody>
+			<tr><td style="background-color:rgb(248,248,248);"><img src="./media/15세.jpg"></td><td id="atr"><input type="button" value="범죄도시2" onclick="input_movie(value);"></td></tr>
+			<tr><td style="background-color:rgb(248,248,248);"><img src="./media/15세.jpg"></td><td id="atr"><input type="button" value="해피 데스나이트" onclick="input_movie(value);"></td></tr>
+			<tr><td style="background-color:rgb(248,248,248);"><img src="./media/전체이용.jpg"></td><td id="atr"><input type="button" value="애프터 양" onclick="input_movie(value);"></td></tr>
+			<tr><td style="background-color:rgb(248,248,248);"><img src="./media/12세.jpg"></td><td id="atr"><input type="button" value="매스" onclick="input_movie(value);"></td></tr>
+			<tr><td style="background-color:rgb(248,248,248);"><img src="./media/청불.jpg"></td><td id="atr"><input type="button" value="파리 13구" onclick="input_movie(value);"></td></tr>			
+			</tbody>
+		</table> 
+		<hr>
+				<!--날짜, 시간선택 및 잔여좌석 표시-->
+			<form>
+			<h1>일자 선택</h1>
+			<input type="date" id= "date_of_movie"/>
+			<script>
+			document.getElementById('date_of_movie').value = new Date().toISOString().substring(0, 10);;
+			</script>
+			<hr>
+			<h1>시간(회차) 선택</h1>
+			<select id="time_of_movie">
+				<option value="07:40">07:40(1관)</option>
+				<option value="09:30">09:30(1관)</option>
+				<option value="11:25">11:25(1관)</option>
+				<option value="13:50">13:50(1관)</option>
+				<option value="15:10">15:10(1관)</option>
+				<option value="17:35">17:35(1관)</option>
+				<option value="19:10">19:10(1관)</option>
+				<option value="21:00">21:00(1관)</option>
+				<option value="22:55">22:55(1관)</option>
+			</select>
+			<hr>
+			<input type="button" value="확인" onclick="input_time();">
+			</form>
+		</div>
+	</section>
+	
+	<section class="section3">
+	<div id = "seat" style = " background : rgb(246,246,246);">
+		<h1 style ="text-align : center">좌석 선택<hr></h1>
+			<table id="info_table" border="1">
+			<caption><b style="font-size:25px">screen<b></caption>
+			<tbody>
+			<tr><td>A1-1</td><td>A1-2</td><td>A1-3</td><td>B1-1</td><td>B1-2</td><td>B1-3</td><td>B1-4</td><td>C1-1</td><td>C1-2</td><td>C1-3</td></tr>
+			<tr><td>A2-1</td><td>A2-2</td><td>A2-3</td><td>B2-1</td><td>B2-2</td><td>B2-3</td><td>B2-4</td><td>C2-1</td><td>C2-2</td><td>C2-3</td></tr>
+			<tr><td>A3-1</td><td>A3-2</td><td>A3-3</td><td>B3-1</td><td>B3-2</td><td>B3-3</td><td>B3-4</td><td>C3-1</td><td>C3-2</td><td>C3-3</td></tr>
+			<tr><td>A4-1</td><td>A4-2</td><td>A4-3</td><td>B4-1</td><td>B4-2</td><td>B4-3</td><td>B4-4</td><td>C4-1</td><td>C4-2</td><td>C4-3</td></tr>
+			
+			
+			</tbody>
+		</table> 
+		</div>
+		<p id="idprt"></p>
+		<p id="resultt" value="ss"></p>
+	</section>
+	<script type="text/javascript">
+		var prt = document.getElementById("idprt");
+		var resultt0 = document.getElementById("resultt");
+	
+		var count_reserve = 1;
+		if(localStorage.getItem(count_reserve)){			
+			count_reserve += 1;
+		}
+		var moviee = "";
+		var date = document.getElementById("date_of_movie"); 
+		var time = document.getElementById("time_of_movie");
+		var seat = "";
+		
+		var mov = document.getElementById("selected_movie");//선택한 정보에 나타낼 영화
+		var tim = document.getElementById("selected_time");//선택한 정보에 나타낼 날짜및시간
+		var sea = document.getElementById("selected_seat"); //선택한 정보에 나타낼 좌석
+		function input_movie(movie_name) {	
+			mov.innerHTML = "";		
+			mov.innerHTML = movie_name;
+			window['moviee'] = movie_name;
+			resultt1.value = resultt1.value + movie_name;
+			
+			}
+		function input_time() {	
+			tim.innerHTML = "";		
+			tim.innerHTML = date.value + "-" + time.value;
+			resultt1.value = resultt1.value + " " + date.value + "-" + time.value;
+			date = document.getElementById("date_of_movie"); 
+			time = document.getElementById("time_of_movie");
+			}
+		function input_sea() {	
+			seat.innerHTML = "";		
+			seat.innerHTML = sea;
+		}
+		
+		var ls = window.localStorage;				// 로컬 스토리지
+		var ls_key = count_reserve; 
+		var ls_value = resultt0.value;
+
+		if (!ls) {
+			alert("로컬 스토리지를 지원하지 않습니다.");
+		}
+
+		function pageload() {	
+			prt.innerHTML = "";		
+			for (var i = 0; i < ls.length; i++) {	// 로컬 스토리지 전체 검색
+				var k = ls.key(i);
+				prt.innerHTML += k + " : " + ls.getItem(k) + "<br>";
+			}
+		}
+
+		function addItem() {						// 로컬 스토리지에 저장
+			ls.setItem(ls_key, ls_value);
+			pageload();
+		}
+
+		function deleteItem() {						// 로컬 스토리지에서 삭제
+			ls.removeItem(ls_key);
+			pageload();
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+
+ 	
+	<footer class="footer">
+		<div>
+		<div id="footerdiv">
+			<b>충청북도 괴산군 사리면 사리로 10-63<br>
+		    Tel:043-1111-1111 | Fax:043-1111-1112 | Email :uucinema@hufs.ac.kr<br>
+			대표자:손무현 | 사업자등록번호 : 111-11-11111<br>
+			<b style = "color : rgb(124,22,41)">Copyright © 2022  YOUYOU Cinema All rights reserved.</b>
+		</div>
+		<div id="logof">
+			<b>유유시네마</b><br>
+			<p id="sogae">The place for you who love movies</p>
+		</div>
+		</div>
+	</footer>
+</body>
+</html>

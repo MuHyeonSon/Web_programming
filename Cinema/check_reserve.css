@@ -1,0 +1,246 @@
+		
+		html, body { margin: 0; padding: 0; height: 100%; }
+		.header1 {
+			width: 100%; height: 7%; 
+			background: rgb(247,63,82);
+		}
+		.header2 {
+			width: 100%; height: 17%; 
+			background: rgb(246,246,246);
+		}
+		.section1 {
+			 /* width: 100%; height: 100%; float: left; */ 
+			 background: rgb(246,246,246); 
+		}
+		.section2 {
+			width: 100%; height: 100%; float: left;
+			background: rgb(237,236,236);
+		}
+		.section3 {
+			width: 100%; height: 90%; float: left;
+			background: rgb(246,246,246);
+		}
+
+
+		.footer { 
+			width: 100%; height: 30%; clear: both; 
+			background: rgb(247,63,82);
+		}
+		
+		/* header */
+		
+		div#logo{
+			color : rgb(247,63,82);
+			position : relative;
+			left : 75px;
+			bottom : 13px;
+			font-size : 35px;
+			font-family : Arial, Sans-Serif;
+		}
+		p#sogae{
+			font-size : 5px;
+			font-family : italic , Sans-Serif;
+		}
+		div div{
+			 display : inline-block; 
+		}
+		img#logoimg{
+			border : 0px dotted rgb(247,63,82);
+			position :relative;
+			bottom : -2px;
+		}
+		
+		#menubar {
+			background : rgb(246,246,246);
+			position : relative;
+			left : 170px;
+			bottom : 30px;
+		}
+		#menubar ul { /* 여백과 패딩 모두 0 */
+			margin : 0;
+			padding : 0;
+			width : 700px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+		}
+		#menubar ul li {
+			display : inline-block; /* 새 줄로 넘어가지 않게 */
+			list-style-type : none; /* 마커 삭제 */
+			padding : 0px 15px; /* top=bottom=0, left=right=15px */ 
+		}
+		#menubar ul li a {
+			color : rgb(247,63,82);
+			font-size : 29px;
+			text-decoration : none; /* 링크 보이지 않게 */
+			font-family : Arial, Sans-Serif;
+		}
+		#menubar ul li a:hover {
+			
+			color : violet;	 /* 마우스 올라 갈 때 색 */
+		}
+		
+		
+		
+		#header1_menubar {
+			position : relative;
+			left : 1000px;
+			top : 5px;
+		}
+		#header1_menubar ul { /* 여백과 패딩 모두 0 */
+			margin : 0;
+			padding : 0;
+			width : 200px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+		}
+		#header1_menubar ul li {
+			display : inline-block; /* 새 줄로 넘어가지 않게 */
+			list-style-type : none; /* 마커 삭제 */
+			padding : 0px 15px; /* top=bottom=0, left=right=15px */ 
+		}
+		#header1_menubar ul li a {
+			color : white;
+			font-size : 15px;
+			text-decoration : none; /* 링크 보이지 않게 */
+		}
+		#header1_menubar ul li a:hover {
+			
+			color : violet;	 /* 마우스 올라 갈 때 색 */
+		}
+		
+		
+		
+		/* section1 */
+		.section_content input[id*="slide"]{ /* id값 slide 갖고 있는 위에 나타나는 버튼들 화면에 안보이도록   */
+			display : none; 
+		}
+			/* 슬라이드 영역*/
+		.section_content .slidewrap{
+			max-width : 1200px;
+			margin : 0 auto; /* 블록요소를 가운데로 정렬 */
+			overflow : hidden; /* 영역벗어나는 것들 안보이도록 */
+		}
+		.section_content .slidelist{
+			white-space : nowrap; /* inline요소 줄 바꿈 없앰 */
+			font-size:0; /* 안쪽에 빈 영역 없앰 */
+		}
+		.section_content .slidelist > li{
+			display : inline-block;
+			vertical-align:middle;
+			width:100%;
+			transition:all .5s; /* 자연스럽게 넘어가도록 애니매이션효과 */
+		}
+		.section_content .slidelist > li > a{
+			display : block; /* 안쪽콘텐츠 다 담을 수 있도록 */
+			position : relative;
+		}
+		.section_content .slidelist > li > a img{
+			width : 100%; /* 가로값 100%줌으로써 반응형으로 사용 */
+		
+		}
+			/* label버튼 (이전 다음) */
+		.section_content .slidelist label{
+			position : absolute; /* 자율배치할 수 있도록 */
+			z-index : 20;
+			top:50%;
+			transform:translateY(-50%);
+			padding:50px;
+			cursor:pointer;
+		}
+		.section_content .slidelist .left{
+			left : 30px; /* 자율배치할 수 있도록 */
+			background : url('media/left.png') center center / 100% no-repeat;
+		}
+		.section_content .slidelist .right{
+			right : 30px; /* 자율배치할 수 있도록 */
+			background : url('media/right.png') center center / 100% no-repeat;
+		}
+		.section_content [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+		.section_content [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+		.section_content [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+	
+		/* section2 */
+		.section2_slidewrap{
+			max-width : 1200px;
+			margin : 0 auto; /* 블록요소를 가운데로 정렬 */
+			overflow : hidden; /* 영역벗어나는 것들 안보이도록 */
+			position : relative;
+			left : 30px;
+
+		}
+		.section2_slidewrap ul { /* 여백과 패딩 모두 0 */
+			margin : 0;
+			padding : 0;
+			width : 1200px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+		}
+		.section2_slidewrap ul li {
+			display : inline-block; /* 새 줄로 넘어가지 않게 */
+			list-style-type : none; /* 마커 삭제 */
+			padding : 50px 5px; /* top=bottom=0, left=right=15px */ 
+		}
+		.section2_slidewrap ul li a {
+			color : rgb(51,51,51);
+			text-decoration : none; /* 링크 보이지 않게 */
+		}
+		.section2_slidewrap ul li a:hover {
+			color : olive;	 /* 마우스 올라 갈 때 색 */
+		}
+	
+		.section2div div.inner{
+			
+			border : 30px dotted orangered;
+			margin: 30px;
+			width: 15%; height: 15%px;
+			padding : 30px;
+			background: powderblue;
+			
+		}
+		
+		/* section3 */
+		table{
+			position : relative;
+			right : -100px;
+			top : 30px;
+			text-align : center;
+			
+		}
+		td{
+			border-collapse : collapse;
+			text-align : center;	
+			height : 36px;
+			width : 45px;
+			cursor : pointer;
+		}
+		th caption{
+			text-align : center;
+			padding : 10px;
+			height : 20px;
+			width : 15px;
+			border : 1px solid rgb(247,63,82);
+		}
+		tbody{
+			border-collapse : collapse;
+			border-bottom : 1px solid darkgray;
+			border-left : 1px solid darkgray;
+			border-right : 1px solid darkgray;
+			border-top : 1px solid darkgray;
+		}
+		td:hover{
+			background-color : rgb(247,63,82);
+			
+		}
+		
+		/* footer */
+		#footerdiv{
+			position : relative;
+			top : 40px;
+			left : 110px;
+			text-align : left;
+			color : rgb(246,246,246)
+		}
+		#logof{
+			color : rgb(246,246,246);
+			position : relative;
+			left : 280px;
+			top : 28px;
+			font-size : 35px;
+			font-family : Arial, Sans-Serif;
+		}		
+			
+		}

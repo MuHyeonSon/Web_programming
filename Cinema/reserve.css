@@ -1,0 +1,243 @@
+		/* reserve.css */
+		
+		html, body { margin: 0; padding: 0; height: 100%; }
+		.header1 {
+			width: 100%; height: 7%; 
+			background: rgb(247,63,82);
+		}
+		.header2 {
+			width: 100%; height: 17%; 
+			background: rgb(246,246,246);
+		}
+		.section1 {
+			  width: 100%; height: 90%; float: left;
+			 background: rgb(237,237,237); 
+		}
+		.section2 {
+			  width: 100%; height: 160%; float: left;
+			 background: rgb(237,237,237); 
+		}
+		.section3 {
+			  width: 100%; height: 100%; float: left;
+			 background: rgb(237,237,237); 
+		}
+
+
+		.footer { 
+			width: 100%; height: 30%; clear: both; 
+			background: rgb(247,63,82);
+		}
+		
+		/* header */
+		
+		div#logo{
+			color : rgb(247,63,82);
+			position : relative;
+			left : 75px;
+			bottom : 13px;
+			font-size : 35px;
+			font-family : Arial, Sans-Serif;
+		}
+		p#sogae{
+			font-size : 5px;
+			font-family : italic , Sans-Serif;
+		}
+		div div{
+			 display : inline-block; 
+		}
+		img#logoimg{
+			border : 0px dotted rgb(247,63,82);
+			position :relative;
+			bottom : -2px;
+		}
+		
+		#menubar {
+			background : rgb(246,246,246);
+			position : relative;
+			left : 170px;
+			bottom : 30px;
+		}
+		#menubar ul { /* 여백과 패딩 모두 0 */
+			margin : 0;
+			padding : 0;
+			width : 700px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+		}
+		#menubar ul li {
+			display : inline-block; /* 새 줄로 넘어가지 않게 */
+			list-style-type : none; /* 마커 삭제 */
+			padding : 0px 15px; /* top=bottom=0, left=right=15px */ 
+		}
+		#menubar ul li a {
+			color : rgb(247,63,82);
+			font-size : 29px;
+			text-decoration : none; /* 링크 보이지 않게 */
+			font-family : Arial, Sans-Serif;
+		}
+		#menubar ul li a:hover {
+			
+			color : violet;	 /* 마우스 올라 갈 때 색 */
+		}
+		
+		
+		
+		#header1_menubar {
+			position : relative;
+			left : 1000px;
+			top : 5px;
+		}
+		#header1_menubar ul { /* 여백과 패딩 모두 0 */
+			margin : 0;
+			padding : 0;
+			width : 200px; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+		}
+		#header1_menubar ul li {
+			display : inline-block; /* 새 줄로 넘어가지 않게 */
+			list-style-type : none; /* 마커 삭제 */
+			padding : 0px 15px; /* top=bottom=0, left=right=15px */ 
+		}
+		#header1_menubar ul li a {
+			color : white;
+			font-size : 15px;
+			text-decoration : none; /* 링크 보이지 않게 */
+		}
+		#header1_menubar ul li a:hover {
+			
+			color : violet;	 /* 마우스 올라 갈 때 색 */
+		}
+		
+		
+	
+		/* section1 */
+
+			
+			#info_selected_movie {
+				background-color : rgb(255,255,255);
+				border:1px solid #5D5D5D;
+				position : relative;
+				height : 450px; 
+				width :800px;
+				top : 25px;
+				left : 50px;
+				padding : 5px;
+				
+			}
+			#info_selected_movie div{
+				display : inline-block;
+				padding : 10px;
+				margin : 5px;
+				font-family : rgb(85,85,85), mitalic , Sans-Serif;
+				font-weight :  bold;
+			}
+			#info_table td{
+				border-bottom : 2px solid rgb(224,224,224)
+			}
+			#info_table td{
+				text-align: left;
+				padding : 10px;
+				height : 20px;
+				width : 100px;
+				background-color : rgb(255,255,255);
+				
+			}
+			#info_table #atr{
+				width :200px;
+			}
+			
+	
+		/* section2 */
+			#movies {
+				background-color : rgb(255,255,255);
+				border:1px solid #5D5D5D;
+				position : relative;
+				height : 700px; 
+				width : 800px;
+				top : 5px;
+				left : 50px;
+				padding : 5px;
+				
+			}
+			#movies {
+				padding : 10px;
+				margin : 5px;
+				font-family : rgb(85,85,85), mitalic , Sans-Serif;
+				font-weight :  bold;
+			}
+			#movies td{
+				border-bottom : 2px solid rgb(224,224,224)
+			}
+			#movies td{
+				text-align: left;
+				padding : 10px;
+				height : 20px;
+				width : 100px;
+				background-color : rgb(255,255,255);
+				
+			}
+			#movies #atr{
+				width :700px;
+			}
+			#movies tr:hover{
+				color : rgb(23,231,32);
+			}
+			#movies tr{
+				cursor : pointer;
+			}
+
+		
+		/* section3 */
+			#seat {
+				background-color : rgb(255,255,255);
+				border:1px solid #5D5D5D;
+				position : relative;
+				height : 390px; 
+				width : 800px;
+				top : -100px;
+				left : 50px;
+				padding : 5px;
+				
+			}
+			#seat {
+				padding : 10px;
+				margin : 5px;
+				font-family : rgb(85,85,85), mitalic , Sans-Serif;
+				font-weight :  bold;
+			}
+			#seat td{
+				border-bottom : 2px solid rgb(224,224,224)
+			}
+			#seat td{
+				text-align: left;
+				padding : 10px;
+				height : 40px;
+				width : 100px;
+				background-color : rgb(255,255,255);
+				
+			}
+			}
+			#seat td:hover{
+				color : rgb(23,231,32);
+				background-color : red;
+			}
+			#seat tr{
+				cursor : pointer;
+			}
+
+		
+		/* footer */
+		#footerdiv{
+			position : relative;
+			top : 40px;
+			left : 110px;
+			text-align : left;
+			color : rgb(246,246,246)
+		}
+		#logof{
+			color : rgb(246,246,246);
+			position : relative;
+			left : 280px;
+			top : 28px;
+			font-size : 35px;
+			font-family : Arial, Sans-Serif;
+		}		
+			
+		}		
